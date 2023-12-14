@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Tailwind</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="dark:bg-slate-800 duration-700">
+    <main class="py-8">
+      <section>
+        <div class="container mx-auto py-5 text-center">
+          <h1 class="text-slate-600 text-2xl font-semibold dark:text-slate-400">
+            Let's learn
+          </h1>
+          <h1
+            class="text-slate-600 text-6xl font-bold bg-gradient-to-r from-blue-700 to-teal-400 bg-clip-text text-transparent"
+          >
+            Tailwind CSS
+          </h1>
+          <div class="flex justify-center mt-8">
+            <span class="text-sm text-slate-600 dark:text-slate-400 mr-2"
+              >Light</span
+            >
+            <input type="checkbox" id="toggle" class="hidden" />
+            <label for="toggle">
+              <div
+                class="w-9 h-5 bg-slate-500 flex items-center p-1 rounded-full cursor-pointer"
+              >
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+              </div>
+            </label>
+            <span class="text-sm text-slate-600 dark:text-slate-400 ml-2"
+              >Dark</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const checkbox = document.querySelector('#toggle');
+      const html = document.querySelector('html');
+
+      checkbox.addEventListener('click', function () {
+        checkbox.checked
+          ? html.classList.add('dark')
+          : html.classList.remove('dark');
+      });
+    </script>
+  </body>
+</html>
